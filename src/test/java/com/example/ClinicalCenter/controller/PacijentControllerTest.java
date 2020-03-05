@@ -49,10 +49,10 @@ public class PacijentControllerTest<ExaminationService, PatientService> {
     @Test
     public void getVremeOdLekaraFTDatumaTest() {
         ResponseEntity<List> responseEntity;
-        responseEntity = testRestTemplate.getForEntity("/api/pacijenti/vremeLekaraFTDatum/", List.class);
+        responseEntity = testRestTemplate.getForEntity("/api/pacijenti/vremeLekaraFTDatum/2020-02-13,marko@gmail.com", List.class);
 
         List<KlinikaTipDTO> tmp = responseEntity.getBody();
-        assertEquals(tmp.size(), 2);
+        assertEquals(tmp.size(), 1);
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
     }
 

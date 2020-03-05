@@ -74,7 +74,7 @@ public class AdminKCServiceUnitTest {
         akc.setPrvoPrijavljivanje(false);
         akc.setUsername("BoGa");
         akc.setEmail("bory@gmail.com");
-        akc.setId(1L);
+        //akc.setId(1L);
 
         AdminKC result = adminKcRepository.save(akc);
 
